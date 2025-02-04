@@ -1,0 +1,403 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #051321;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem; /* Add padding for small screens */
+}
+
+.card {
+    width: 40rem; /* Default width */
+    background-color: #051321;
+    max-width: 100%; /* Ensure it doesn't overflow */
+}
+
+.Card-bio {
+    background-color: rgb(152, 90, 9);
+    padding: 2rem 2rem 4rem 2rem;
+    display: flex;
+    border-radius: 0.5rem 0.5rem 0 0;
+    position: relative;
+    z-index: 100;
+    flex-direction: column; /* Stack content vertically for small screens */
+    align-items: center; /* Center the content */
+}
+
+.img-wrapper {
+    width: 9rem;
+    height: 9rem;
+    margin-right: 3rem;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.Okon-info {
+    width: 60%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Arial', 'sans-serif';
+    color: #fafcfd;
+    text-shadow: 0 0.1rem 0.2 rgba(0, 0, 0, 0.3);
+}
+
+.Okon-info h3 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    letter-spacing: .1rem;
+    margin-bottom: 1rem;
+}
+
+.Okon-info h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.Okon-info p {
+    font-size: 1rem;
+    letter-spacing: .1rem;
+}
+
+.card-btn {
+    position: absolute;
+    bottom: -2.5rem;
+    right: 10rem;
+    width: 20rem;
+    height: 6rem;
+    background-color: #2b303a;
+    color: #fff;
+    border-radius: 5rem;
+    border: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Arial', 'sans-serif';
+    font-size: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 0.3rem 0.8rem rgb(0, 0, 0.3);
+    outline: none;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.change .card-btn {
+    width: 6rem;
+    right: 3rem;
+    bottom: -3rem;
+    border-radius: 50%;
+}
+
+.card-btn-contact {
+    transition: all 0.5s 0.1s;
+}
+
+.card-btn .contact {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.card-btn i {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.change .card-btn-contact {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.1s;
+}
+
+.card-btn i {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.change .card-btn i {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+}
+
+.card-contact {
+    background-color: #683404;
+    color: #fafcfd;
+    padding: 1.5rem 2rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    transform: translateY(-100%);
+    transition: all 0.5s;
+}
+
+.change .card-contact {
+    transform: translateY(0);
+}
+
+.card-contact h4 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Arial', 'sans-serif';
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-shadow: 0.1rem;
+    text-shadow: 0 0.1rem 0.2rem rgb(0, 0, 0.3);
+    transform: scale(0);
+    transform-origin: left;
+    transition: all 0.5s;
+}
+
+.change .card-contact h4 {
+    transform: scale(1);
+}
+
+.card-social {
+    background-color: #fafcfd;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transform: translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.change .card-social {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.email {
+    transition: all .5s .3s;
+}
+
+.instagram {
+    transition: all .5s .5s;
+}
+
+.twitter {
+    transition: all .5s .7s;
+}
+
+.linkedin {
+    transition: all .5s .9s;
+}
+
+
+.icon-wrapper {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.email .icon-wrapper {
+    background-color: #0c5bca;
+}
+
+.instagram .icon-wrapper {
+    background-color: #c13584;
+}
+
+.twitter .icon-wrapper {
+    background-color: #0f0f0f;
+}
+
+.linkedin .icon-wrapper {
+    background-color: #0a6494;
+}
+
+.icon-wrapper i {
+    font-size: 2rem;
+    color: #fafcfd;
+}
+
+.contact-details h4 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Arial', 'sans-serif';
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-details p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Arial', 'sans-serif';
+    font-size: 1.4rem;
+    color: #444;
+    letter-spacing: 0.1rem;
+}
+
+.contact-details SPAN {
+    margin: auto;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #999;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .card {
+        width: 90%; /* Card takes up most of the screen */
+    }
+
+    .Card-bio {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem;
+    }
+
+    .img-wrapper {
+        margin-right: 0;
+        margin-bottom: 1rem; /* Add space below image */
+    }
+
+    .Okon-info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .card-btn {
+        bottom: -2rem;
+        right: 5rem;
+        width: 15rem;
+        height: 5rem;
+        font-size: 1.8rem;
+    }
+
+    .card-btn-contact {
+        bottom: -1rem;
+        right: 4rem;
+    }
+
+    .card-contact h4 {
+        font-size: 2rem;
+    }
+
+    .card-social {
+        margin: 1.5rem 0;
+    }
+
+    .icon-wrapper {
+        width: 3rem;
+        height: 3rem;
+        margin-right: 1.5rem;
+    }
+
+    .icon-wrapper i {
+        font-size: 1.5rem;
+    }
+
+    .contact-details h4 {
+        font-size: 1.4rem;
+    }
+
+    .contact-details p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* Full width on small screens */
+    }
+
+    .Card-bio {
+        padding: 1rem;
+    }
+
+    .Okon-info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .Okon-info p {
+        text-align: justify;
+        margin: auto;
+    }
+
+    .img-wrapper {
+        width: 7rem;
+        height: 7rem;
+        margin-bottom: 1rem;
+    }
+
+    .card-btn {
+        width: 12rem;
+        height: 4rem;
+        font-size: 1.6rem;
+        bottom: -1rem;
+        right: 2rem;
+    }
+
+    .card-contact h4 {
+        font-size: 1.3rem;
+    }
+
+    .icon-wrapper {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .icon-wrapper i {
+        font-size: 1.3rem;
+    }
+
+    .contact-details h4 {
+        font-size: 1.3rem;
+    }
+
+    .contact-details p {
+        font-size: 1rem;
+    }
+}
+
+/* lIVE tIME */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+.clock-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#clock {
+    font-size: 3em;
+    font-weight: bold;
+    color: #007BFF;
+}
